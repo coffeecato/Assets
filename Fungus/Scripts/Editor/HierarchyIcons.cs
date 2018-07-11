@@ -25,7 +25,11 @@ namespace Fungus
         //sorted list of the GO instance IDs that have flowcharts on them
         static List<int> flowchartIDs = new List<int>();
 
+        static List<int> selectedGOs = new List<int>();
+
         static bool initalHierarchyCheckFlag = true;
+
+        static bool isSelected = false;
 
         static HierarchyIcons()
         {
@@ -62,15 +66,70 @@ namespace Fungus
 
             // place the icon to the left of the element
             Rect r = new Rect(selectionRect);
-            r.x = 0;
+            r.x = 200;
             r.width = r.height;
 
             //GameObject go = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
 
             //binary search as it is much faster to cache and int bin search than GetComponent
             //  should be less GC too
+
+            
             if (flowchartIDs.BinarySearch(instanceID) >= 0)
-                GUI.Label(r, TextureIcon);
+            {
+                //source code
+                //GUI.Label(r, TextureIcon);
+       
+                if (GUI.Button(r, TextureIcon))
+                {
+                    Debug.Log("Click Button");
+                    if (!selectedGOs.Contains(instanceID))
+                    {
+                        selectedGOs.Add(instanceID);
+                        isSelected = true;                 
+                    }
+                    else
+                    {
+                        selectedGOs.Remove(instanceID);
+                        isSelected = false;
+                    }
+                }
+
+                Rect mark = new Rect(r);
+                if (isSelected)
+                {
+                    mark.x = 0;
+                }
+                else
+                {
+                    mark.x = 50;
+                }
+                GUI.Label(mark, TextureIcon);
+
+                //string[] selStrings = new string[] { "Grid 1", "Grid 2", "Grid 3", "Grid 4" };
+                //GUI.SelectionGrid(new Rect(0, selectionRect.y, r.width, r.height + 50), 0, selStrings, 1);
+
+                //Selection.selectionChanged = delegate
+                //{
+                //    if (Selection.activeObject != null)
+                //    {
+                //        Debug.Log(Selection.activeObject.name);
+                //        if (!selectedGOs.Contains(Selection.activeObject.GetInstanceID()))
+                //        {
+                //            selectedGOs.Add(Selection.activeObject.GetInstanceID());
+                //            isSelected = true;
+                //        }
+                //        else
+                //        {
+                //            selectedGOs.Remove(Selection.activeObject.GetInstanceID());
+                //            isSelected = false;
+                //        }
+                //    }
+                //};
+
+
+
+            }
         }
     }
 }
