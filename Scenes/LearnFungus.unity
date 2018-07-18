@@ -405,7 +405,7 @@ MonoBehaviour:
   - {fileID: 683860053}
 --- !u!114 &683860047
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683860039}
@@ -473,7 +473,7 @@ MonoBehaviour:
   waitForFrames: 1
 --- !u!114 &683860050
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683860039}
@@ -499,7 +499,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &683860051
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683860039}
@@ -525,7 +525,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &683860052
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683860039}
@@ -550,7 +550,7 @@ MonoBehaviour:
   - {fileID: 683860051}
 --- !u!114 &683860053
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 683860039}
@@ -689,6 +689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1099603289}
   - component: {fileID: 1099603288}
+  - component: {fileID: 1099603290}
   m_Layer: 0
   m_Name: Stage
   m_TagString: Untagged
@@ -736,6 +737,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099603290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099603287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1330de239b04cea8830275b443ccb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
 --- !u!1 &1413130870
 GameObject:
   m_ObjectHideFlags: 0
